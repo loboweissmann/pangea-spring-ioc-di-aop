@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="origem" class="pangea.SistemaArquivos">
+	
+	</bean>
+	
+	<bean id="destino" class="pangea.Mainframe">
+	
+	</bean>
+	
+	<bean id="processador" class="pangea.Processador" init-method="init">
+		<property name="origem" ref="origem"/>
+		<property name="destino" ref="destino"/>
+	</bean>
+	
+</beans>
